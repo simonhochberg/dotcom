@@ -18,6 +18,9 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2ltb25ob2NoYmVyZyIsImEiOiIwYVZ1Uk1VIn0.EcS4Ld8UB_UDeqJqJqQIyg';
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([37.7749, -122.4194], 12.2);
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL('dotcom/sf_holes.geojson')
+    .addTo(map);
 </script>
 </body>
 </html>
