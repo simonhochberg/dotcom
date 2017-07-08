@@ -1,3 +1,23 @@
 <html>
-<h1>simon hochberg dot com</h1>
+<head>
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:40; bottom:40; width:60%; }
+  #header { position:center; }
+</style>
+</head>
+<body>
+  <h1 id='header'>simon hochberg dot com</h1>
+<div id='map'></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2ltb25ob2NoYmVyZyIsImEiOiIwYVZ1Uk1VIn0.EcS4Ld8UB_UDeqJqJqQIyg';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([37.7749, -122.4194], 12.2);
+</script>
+</body>
 </html>
